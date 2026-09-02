@@ -20,3 +20,19 @@ else:
     minimo = num3
 
 print(minimo)
+
+vocal:str="a"
+match vocal:
+    case "a":
+        print("es una vocal")
+    case "e":
+        print("es una vocal")
+    case "i":
+        print("es una vocal")
+    case "o":
+        print("es una vocal")
+    case "u":
+        print("es una vocal")
+    case _:
+        print("es un consonante")
+
