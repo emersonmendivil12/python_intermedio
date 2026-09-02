@@ -1,38 +1,29 @@
-persona1 = "piedra"
-persona2 = "papel"
+## Usando while crer un programa que me de un pregunta para responder y que solo teng 3 oportunidades para dar con la respuesta correcta
+# Pregunta y respuesta correcta
+## Usando while: Adivina el color
+## Tienes solo 3 oportunidades
+## Usando while: Adivina el color
+## Tienes solo 3 oportunidades
 
-if persona1 == "piedra" and persona2 == "papel":
-    print("gana persona2, papel enbuelve a piedra")
-else:
-    print("gana persona1, papel enbuelve a piedra")
+pregunta = "¿De que color es el cielo en un dia despejado? "
+respuesta_correcta = "azul"
 
+intentos = 1
+salir = "N"
 
+while salir == "N":
+    respuesta = input(pregunta)
+    
+    if respuesta == respuesta_correcta:
+        print("Correcto! El cielo es azul")
+        salir = "S"
+    else:
+        if intentos < 3:
+            print("Incorrecto. Intento", intentos)
+            intentos = intentos + 1
+        else:
+            print("Incorrecto. Se acabaron tus 3 oportunidades")
+            print("La respuesta correcta era:", respuesta_correcta)
+            salir = "S"
 
-num1 = int(input("Ingresa el primer número: "))
-num2 = int(input("Ingresa el segundo número: "))
-num3 = int(input("Ingresa el tercer número: "))
-
-if num1 <= num2 and num1 <= num3:
-    minimo = num1
-elif num2 <= num1 and num2 <= num3:
-    minimo = num2
-else:
-    minimo = num3
-
-print(minimo)
-
-vocal:str="a"
-match vocal:
-    case "a":
-        print("es una vocal")
-    case "e":
-        print("es una vocal")
-    case "i":
-        print("es una vocal")
-    case "o":
-        print("es una vocal")
-    case "u":
-        print("es una vocal")
-    case _:
-        print("es un consonante")
-
+print("Adios")

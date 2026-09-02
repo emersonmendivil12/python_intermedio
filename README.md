@@ -69,3 +69,28 @@ match vocal:
         print("es una consonante")
 
 ```
+## bucles 
+### la sentencia while es el primer mecanismo que existe en python para repetir instrucciones.
+la semantica tras esta centensia es mientras se cumpla la condicion as algo 
+ejemplo 
+```python
+ salir:str="N"
+while salir=="N":
+    print("Hol que taal")
+    salir=input("deseas salir (S/N): ")
+print("Adios")
+```
+se  puede de un "while" asiendo el uso de "break" 
+```python
+intentos:int=0
+respuesta_correcta:str="ayacucho"
+while intentos<3:
+    respuesta_usuario:str=input("Capital Ayacucho: ")
+    if respuesta_correcta==respuesta_usuario:
+        print("respuesta correcta")
+        break
+    else:
+        print("Error si intentando")
+    intentos=intentos+1
+print(intentos) 
+```
