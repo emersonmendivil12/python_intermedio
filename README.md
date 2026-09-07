@@ -37,7 +37,8 @@ if temp <10:
         pint("nivel verde normal ")
     elif temp <30:
         pint("nivel naranja")
-    else:
+    
+     else:
         print("nivel rojo ")
 ```
 
@@ -91,6 +92,76 @@ while intentos<3:
         break
     else:
         print("Error si intentando")
+    
+    
     intentos=intentos+1
 print(intentos) 
 ```
+### la sentencia for
+python permite recorrer aquellos tipos de datos que sean **iterables**.
+Algunos ejemplos de tipos de datos que permiten ser iterados son: cadenas de 
+texto, listas, diccionarios, ficheros.
+```python
+nombre:str="gargamel" # string, texto, cadena de texto
+amigos:list[str]=['pepe','lucho','juan'] # lista de texto
+alumno:dict[str:int|str]={
+    "dni":76543298,
+    "nombre":"juncito"
+} # diccionario
+### la sentencia for
+
+A continuacion planteamos un ejemplo en el que vaamos a 
+recorrer una cadena de texto:
+```python
+texto:str="hola mundo"
+for letra in texto:
+    print(letra)
+```
+La clave para entender el ejercicio es darse cuenta que el bucle va tomando en 
+cada iteración, cada uno de los elementos de la variable. 
+En el ejemplo 'letra' va tomando cada una de las letras que tiene 'texto'.
+La variable 'letra' puede tomar cualquier nombre.
+
+**Romper un bucle for**
+Al igual que `while`, para romper o terminar un bucle `for` debemos usar `break`.
+*ojo* - para realizar la rotura se debe previamente cumplir una condicional
+## crear un programa que recorra un texto y que termine la ejecucion cuando encuentra la letra a
+```python
+texto:str="holis de donde eres y a donde vas"
+for l in texto:
+    if l == "a":
+        break
+    else:
+        print(l)
+```
+**secuencias de numeros**
+Es my habitual hacer uso de secuencias en bucles, python aporta una funcion 
+para reaalizar la secuencia de numeros `range()`, esta funcion devuelve o 
+retornaun flujo de numeros en el rango especificado.
+su estructura es la siguiente:     
+
+- `start` - es *opcional* y tiene valor por defecto `0`
+- `stop` - es *obligatorio* (este valor siempre llega a 1 menos que el valor asignado)
+- `step` - es *opcional* y tiene valor por defecto `1` es el valor que ira incrementado.
+```python
+##1. desemos mostra ls numeros del 0 al 5 con la funcion range
+for numero in range(6):
+    print(numero)
+print("-----------------")
+
+##2. Deseamos mostrar los numers del 2 al 6
+for numero in range(2,7):
+    print(numero)
+print("-----------------")
+
+##3. mostrar los numeros pares que existen entre 1 y 10
+for pares in range(2,11,2):
+    print(pares)
+
+```
+> [!TIP] Se suele utilizar nombres de variables `i,j,k` paara 
+lo que se denomina `contadores`. o la variable que va despues 
+del `for`.
+
+
+
